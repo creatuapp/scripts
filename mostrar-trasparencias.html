@@ -1,0 +1,30 @@
+<script
+  src="https://code.jquery.com/jquery-1.9.0.min.js"
+  integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+
+<!-- HTML -->
+<style>
+div{margin:0;margin-top:50;postion:absolute;width: 300px; height: 300px; text-align: center; border: 1px solid black;  position: absolute;}
+b{font-weight:strong;}
+</style>
+<div id="1" style="display:none;background-color:white;">1 <b>2</b></div>
+<div id="2" style="display:none;background-color:red;opacity: 0.3;">2</div>
+<div id="3" style="display:none;background-color:gold;opacity: 0.4;">3</div>
+<div id="4" style="display:none;background-color:green;opacity: 0.5;">4</div>
+
+
+<a href="#" id="alternar-1">Mostrar 1</a>
+<a href="#" id="alternar-2">Mostrar 2</a>
+<a href="#" id="alternar-3">Mostrar 3</a>
+<a href="#" id="alternar-4">Mostrar 4</a>
+<script>
+$(document).ready(function(){$("#alternar-1").toggle(function(e){$("#1").slideDown(),$(this).text("Cerrar el panel"),e.preventDefault()},function(e){$("#1").slideUp(),$(this).text("Mostrar 1"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-2").toggle(function(e){$("#2").slideDown(),$(this).text("Cerrar el panel"),e.preventDefault()},function(e){$("#2").slideUp(),$(this).text("Mostrar 2"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-3").toggle(function(e){$("#3").slideDown(),$(this).text("Cerrar el panel"),e.preventDefault()},function(e){$("#3").slideUp(),$(this).text("Mostrar 3"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-4").toggle(function(e){$("#4").slideDown(),$(this).text("Cerrar el panel"),e.preventDefault()},function(e){$("#4").slideUp(),$(this).text("Mostrar 4"),e.preventDefault()})});
+</script>
