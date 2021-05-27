@@ -1,0 +1,84 @@
+<script
+  src="https://code.jquery.com/jquery-1.9.0.min.js"
+  integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344="
+  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+
+<!-- HTML -->
+<style>
+div{margin:0;margin-top:50;postion:absolute;width: 300px; height: 300px; text-align: center; border: 1px solid black;  position: absolute;}
+b{font-weight:strong;}
+</style>
+<div id="0" style="background-color:white;filter:brightness(1.0);"><h1> BIENVENIDOS !!!</h1>
+<br>Haz clic en los enlaces de arriba para descubir contenidos</div>
+<div class="respuesta" id="1" style="display:none;background-color:white;filter:brightness(0.9);">1/<b>4</b>
+<button  target="FRAME" class="button" href="http://www.bing.com" id="alternar-0">◄ CERRAR VENTANA</button>
+<input type=button onClick=window.open("https://www.plus2net.com/html_tutorial/button-linking.php","demo","width=350,height=350,left=150,top=100,toolbar=0,status=0,"); value="Tutorial Child Window">
+<input type=button onClick=window.open("https://www.youtube.com/","demo","width=350,height=350,left=150,top=100,toolbar=0,status=0,"); value="Youtube C Window">
+<input type=button onClick="self.close();" value="Close this window">
+<input type="button" value="Cerrar" onclick="window.opener.closeAllChildren()">
+</div>
+<style>
+#button {
+padding: 0;
+}
+#button li {
+display: inline;
+}
+#button li a {
+font-family: Arial;
+font-size:11px;
+text-decoration: none;
+float:left;
+padding: 10px;
+background-color: #2175bc;
+color: #fff;
+}
+#button li a:hover {
+background-color: #2586d7;
+margin-top:-2px;
+padding-bottom:12px;
+}
+</style>
+<div class="respuesta" id="2" style="display:none;background-color:red;">2/<b>4</b>
+<ul id="button">
+<li><a href="https://www.cssblog.es/crear-un-menu-horizontal-simple-con-css/#">Home</a></li>
+<li><a href="https://www.cssblog.es/crear-un-menu-horizontal-simple-con-css/#">About</a></li>
+<li><a href="https://www.cssblog.es/crear-un-menu-horizontal-simple-con-css/#">Services</a></li>
+<li><a href="https://www.cssblog.es/crear-un-menu-horizontal-simple-con-css/#">Clients</a></li>
+<li><a href="https://www.cssblog.es/crear-un-menu-horizontal-simple-con-css/#">Products</a></li>
+
+ 
+</ul>
+
+</div>
+<div class="respuesta" id="3" style="display:none;background-color:gold;">3/<b>4</b></div>
+<div class="respuesta" id="4" style="display:none;background-color:green;">4/<b>4</b></div>
+
+
+<input type="button" value="Cerrar Todo" class="alternar-todo">
+<a href="#" id="alternar-1">Tab 1</a>|
+<a href="#" id="alternar-2">Tab 2</a>|
+<a href="#" id="alternar-3">Tab 3</a>|
+<a href="#" id="alternar-4">Tab 4</a>|
+<script>
+$(document).ready(function(){$("#alternar-0").toggle(function(e){$("#0").slideDown(),$(this).text("Cerrar"),e.preventDefault()},function(e){$("#1").slideUp(),$(this).text("Estas en Panel 1"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-1").toggle(function(e){$("#1").slideDown(),$(this).text("Cerrar"),e.preventDefault()},function(e){$("#1").slideUp(),$(this).text("Mostrar 1"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-2").toggle(function(e){$("#2").slideDown(),$(this).text("Cerrar"),e.preventDefault()},function(e){$("#2").slideUp(),$(this).text("Mostrar 2"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-3").toggle(function(e){$("#3").slideDown(),$(this).text("Cerrar"),e.preventDefault()},function(e){$("#3").slideUp(),$(this).text("Mostrar 3"),e.preventDefault()})});
+$(document).ready(function(){$("#alternar-4").toggle(function(e){$("#4").slideDown(),$(this).text("Cerrar"),e.preventDefault()},function(e){$("#4").slideUp(),$(this).text("Mostrar 4"),e.preventDefault()})});
+// jQuery
+    $(document).ready(function(){ 
+        $('.alternar-respuesta').on('click',function(e){
+            $(this).parent().next().toggle();
+            e.preventDefault();
+        });
+        $('.alternar-todo').on('click',function(e){
+            $('.respuesta').toggle('slow');
+            e.preventDefault();
+        });
+    })
+</script>
