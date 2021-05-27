@@ -25,12 +25,12 @@
     vertical-align:middle;
 }
 .hover_bkgr_fricc > div {
-    background-color: #fff;
+    background-color: #101;font-color:#fff;
     box-shadow: 10px 10px 60px #555;
     display: inline-block;
     height: auto;
     max-width: 551px;
-    min-height: 100px;
+    min-height: 50px;
     vertical-align: middle;
     width: 60%;
     position: relative;
@@ -46,8 +46,8 @@
     font-family: arial;
     font-weight: bold;
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: 20px;
+    right: 30px;
     font-size: 25px;
     line-height: 30px;
     width: 30px;
@@ -60,12 +60,14 @@
 .trigger_popup_fricc {
     cursor: pointer;
     font-size: 20px;
-    margin: 20px;
+    margin: 0px;
     display: inline-block;
     font-weight: bold;
 }
-/* Popup box BEGIN */
-
+/* Popup box BEGIN *//* Decoracion de titulo */
+P{color:#fff;}
+p:hover{font-family: san-serif;
+color: #9EFF36;}
 </style>
 <script>
 $(window).load(function () {
@@ -97,7 +99,7 @@ function openIt(){
     <span class="helper"></span>
     <div>
         <div class="popupCloseButton">&times;</div>
-        <p>Video URL de Youtube<br /><iframe width="560" height="315" src="//www.youtube.com/embed/kJQP7kiw5Fk?autoplay=1&mute=1" name="youtube embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p>Video URL de Youtube<br /><iframe width="300" height="215" src="//www.youtube.com/embed/kJQP7kiw5Fk?autoplay=1&mute=1" name="youtube embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </p>
     </div>
 </div>
