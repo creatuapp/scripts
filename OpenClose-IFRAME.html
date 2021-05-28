@@ -1,0 +1,25 @@
+<!----SCRIPT QUE IMPORTAMOS PARA QUE SE EJECUTE EL CODIGO--->
+
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!----BOTON NECESARIO PARA LA FUNCION loadPage--->
+<button onclick='loadPage()'>Abrir iframe</button>
+<!----BOTON NECESARIO PARA LA FUNCION closePage--->
+<button onclick='closePage()'>Cerrar iframe</button>
+<!----DIV NECESARIO PARA POSICIONAR AL IFRAME--->
+<div style="margin-top:50px;">
+<!----IFRAME DEFINIDO PERO OCULTO--->
+<iframe style='display:none' id='frame' width='400' height='400' frameborder='0'></iframe><div>
+<!----SCRIPT CON FUNCION ABRIR CERRAR--->
+
+<script>
+function loadPage(){
+     var frame = $('#frame');
+     var url = 'http://www.bing.com';
+     frame.attr('src',url).show();
+ }
+function closePage(){
+     var frame = $('#frame');
+     var url = '';
+     frame.attr('src',url).hidden();
+ }
+</script>
