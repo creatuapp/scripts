@@ -1,0 +1,31 @@
+
+
+<!----SCRIPT QUE IMPORTAMOS PARA QUE SE EJECUTE EL CODIGO--->
+
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!----links NECESARIO PARA LA FUNCION loadPage--->
+<button onclick='loadPage()'>Abrir FRAME</button>
+<a target="FRAME" href="https://www.hscripts.com/tutorials/css/mouse-over-effect.php" onclick='loadPage()'><button>Bing LINK</button></a>
+<a target="FRAME" href="http://201.172.61.81:85/peliculas/octubre/" onclick='loadPage()'><button>PELIS Link</button></a>
+<a target="FRAME" href="https://creatuapp.github.io/web/paginas/PLAYER/URL.html?var1=http://www.hirubosi.asia/d1/d1_peliculas/libertarias_Segment_1_mpeg4.mp4" onclick='loadPage()'><button>MP4 Links</button></a>
+<a target="FRAME" href="https://www.bing.com/videos/search?q=peliculas%20completas%202021&qs=HS&form=QBVR&sp=1&pq=peli&sc=8-4&cvid=2804705751324B8DA6B18EFF71DC17A4" onclick='loadPage()'><button>Bing Peliculas</button></a>
+<!----BOTON NECESARIO PARA LA FUNCION closePage--->
+<button onclick='closePage()'>Cerrar FRAME</button>
+<!----DIV NECESARIO PARA POSICIONAR AL IFRAME--->
+<div style="margin-top:50px;">
+<!----IFRAME DEFINIDO CON name PERO OCULTO--->
+<iframe name='FRAME' style='display:none' id='frame' width='100%' height='800' frameborder='0'></iframe><div>
+<!----SCRIPT CON FUNCION ABRIR CERRAR--->
+
+<script>
+function loadPage(){
+     var frame = $('#frame');
+     var url = 'https://www.bing.com/';var name = $('FRAME');
+     frame.attr('src',url).show();
+ }
+function closePage(){
+     var frame = $('#frame');
+     var url = '';var name = $('FRAME');
+     frame.attr('src',url).hidden();
+ }
+</script>
